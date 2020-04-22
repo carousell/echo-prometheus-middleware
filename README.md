@@ -1,6 +1,6 @@
 To use, simply
 ```
-import "git.chotot.org/go-common/echopprof"
+import "github.com/701search/echo-prometheus-middleware"
 
 
 prometheusMiddleware := echoprometheus.NewPrometheus("")
