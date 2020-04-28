@@ -3,7 +3,7 @@ origin from chotot code
 To use, simply
 ```
 import (
-  echoprometheus "github.com/701search/echo-prometheus-middleware"
+  echoprometheus "github.com/carousell/echo-prometheus-middleware"
 )
 
 prometheusMiddleware := echoprometheus.NewPrometheus("")
