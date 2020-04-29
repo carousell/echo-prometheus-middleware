@@ -1,7 +1,7 @@
 package echoprometheus
 
 import (
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 	"github.com/dnesting/client_golang/prometheus"
 
 	"strconv"
