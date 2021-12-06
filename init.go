@@ -2,7 +2,8 @@ package echoprometheus
 
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/dnesting/client_golang/prometheus"
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 
 	"strconv"
 	"time"
@@ -92,6 +93,6 @@ func (p *Prometheus) middlewareFunc() echo.MiddlewareFunc {
 }
 
 func prometheusHandler() echo.HandlerFunc {
-	h := prometheus.UninstrumentedHandler()
+	h := promhttp.HandlerFor(prometheus.DefaultGatherer, promhttp.HandlerOpts{})
 	return echo.WrapHandler(h)
 }
